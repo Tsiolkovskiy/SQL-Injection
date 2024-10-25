@@ -1,2 +1,11 @@
+//sql injection
 SELECT * FROM users WHERE username = '' OR 1=1 --' AND password = '';
+
+//Input validation
+import re
+email = input("Enter your email: ")
+if re.match(r"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$", email):
+    print("Valid email")
+else:
+    print("Invalid email")
 
